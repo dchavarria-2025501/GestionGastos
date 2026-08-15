@@ -1,0 +1,17 @@
+<nav style="display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:#1f2937; color:#fff;">
+  <strong>GestionGastos</strong>
+
+  <div style="display:flex; gap:16px; align-items:center;">
+    <ng-container *ngIf="auth.isLoggedIn(); else invitado">
+      <a routerLink="/dashboard" style="color:#fff;">Inicio</a>
+      <a routerLink="/profile" style="color:#fff;">Perfil</a>
+      <a *ngIf="auth.hasRole('admin')" routerLink="/admin/dashboard" style="color:#fff;">Admin</a>
+      <span style="opacity:0.7;">{{ auth.currentUser()?.nombre }} ({{ auth.currentUser()?.role }})</span>
+      <button (click)="logout()">Salir</button>
+    </ng-container>
+    <ng-template #invitado>
+      <a routerLink="/login" style="color:#fff;">Login</a>
+      <a routerLink="/register" style="color:#fff;">Registro</a>
+    </ng-template>
+  </div>
+</nav>

@@ -1,0 +1,37 @@
+.dashboard-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid #10b981; /* Detalle en verde menta soft */
+}
+
+.dashboard-card h1, .dashboard-card h2 {
+  color: #0f172a;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-user {
+  display: inline-block;
+  background-color: #ecfdf5;
+  color: #047857;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card p {
+  color: #475569;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}

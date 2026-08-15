@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "f8697329-450f-4e1a-9231-2c19a0a62362",
+      "nombre": "Dominick",
+      "email": "sebastiangeinstins@gmail.com",
+      "passwordHash": "$2a$10$k/wV704x6vND9m23.Bcm1ukZvGu/IVkpLlm.YrU0fNmVwg5KATMDO",
+      "role": "user",
+      "createdAt": "2026-08-14T23:47:40.310Z"
+    }
+  ]
+}

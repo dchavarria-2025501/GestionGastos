@@ -1,0 +1,63 @@
+/* Variables de paleta de colores suaves y modernos */
+:root {
+  --bg-gradient: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  --navbar-bg: #1e293b;
+  --primary-btn: #4f46e5;
+  --primary-btn-hover: #4338ca;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-muted: #6b7280;
+  --accent-color: #3b82f6;
+  --accent-soft: #e0e7ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+/* Estilos de Navbar */
+nav, .navbar {
+  background-color: var(--navbar-bg) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #f8fafc !important;
+  letter-spacing: 0.5px;
+}
+
+.nav-link, nav a {
+  color: #cbd5e1 !important;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover, nav a:hover {
+  color: #f8fafc !important;
+  transform: translateY(-1px);
+}
+
+.btn-logout {
+  background-color: #ef4444;
+  color: white !important;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #dc2626;
+}
