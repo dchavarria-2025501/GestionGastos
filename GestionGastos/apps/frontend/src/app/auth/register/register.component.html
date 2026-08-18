@@ -2,7 +2,7 @@
   <h2>Crear cuenta</h2>
 
   <p class="error" *ngIf="error">{{ error }}</p>
-  <p *ngIf="exito" style="color:#16a34a; font-size:13px;">{{ exito }}</p>
+  <p class="exito" *ngIf="exito">{{ exito }}</p>
 
   <form (ngSubmit)="onSubmit()">
     <label>Nombre</label>
@@ -22,5 +22,5 @@
     </button>
   </form>
 
-  <p>¿Ya tienes cuenta? <a routerLink="/login">Inicia sesion</a></p>
+  <p class="auth-footer">¿Ya tienes cuenta? <a routerLink="/login">Inicia sesion</a></p>
 </div>

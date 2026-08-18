@@ -22,9 +22,9 @@
               <option value="admin">admin</option>
             </select>
           </ng-container>
-          <ng-template #soloLectura>{{ u.role }}</ng-template>
+          <ng-template #soloLectura><span class="role-badge" [ngClass]="u.role">{{ u.role }}</span></ng-template>
         </td>
-        <td style="display:flex; gap:8px;">
+        <td class="actions-cell">
           <button *ngIf="editandoId !== u.id" (click)="editarRol(u)">Editar rol</button>
           <button *ngIf="editandoId === u.id" (click)="guardarRol(u)">Guardar</button>
           <button class="danger" (click)="eliminar(u)">Eliminar</button>
