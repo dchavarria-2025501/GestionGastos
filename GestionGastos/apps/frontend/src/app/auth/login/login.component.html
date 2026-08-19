@@ -1,4 +1,18 @@
 <div class="container">
+  <!-- Espacio reservado para el logo de la empresa: coloca el archivo en
+       apps/frontend/src/assets/logo/logo.png y aparecera automaticamente aqui. -->
+  <div class="login-logo">
+    <img
+      src="assets/logo/logo.png"
+      alt="Logo de la empresa"
+      class="login-logo-img"
+      [class.oculto]="!logoCargado"
+      (load)="onLogoLoad()"
+      (error)="onLogoError()"
+    />
+    <span class="login-logo-placeholder" *ngIf="!logoCargado">LOGO</span>
+  </div>
+
   <h2>Iniciar sesion</h2>
 
   <p class="error" *ngIf="error">{{ error }}</p>
@@ -17,5 +31,3 @@
 
   <p class="auth-footer">¿No tienes cuenta? <a routerLink="/register">Registrate aqui</a></p>
 </div>
-
-

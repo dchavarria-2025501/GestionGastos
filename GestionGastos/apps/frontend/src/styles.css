@@ -218,6 +218,80 @@ button.danger {
   margin-bottom: 1rem;
 }
 
+/* ---------- Logo (login) ---------- */
+.login-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1.5px dashed var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.login-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.login-logo-img.oculto {
+  display: none;
+}
+
+.login-logo-placeholder {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 0 0.4rem;
+}
+
+/* ---------- Modal de sesion vencida ---------- */
+.session-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 12, 0.72);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.session-modal {
+  max-width: 420px;
+  width: 100%;
+  background: linear-gradient(180deg, var(--bg-panel-soft) 0%, var(--bg-panel) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem 2.25rem;
+  text-align: center;
+}
+
+.session-modal h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+}
+
+.session-modal p {
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
+  line-height: 1.5;
+}
+
+.session-modal button {
+  width: 100%;
+}
+
 /* ---------- Enlace inferior de auth ---------- */
 .auth-footer {
   margin-top: 2rem;

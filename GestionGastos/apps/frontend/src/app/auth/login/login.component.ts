@@ -16,7 +16,19 @@ export class LoginComponent {
   error = '';
   cargando = false;
 
+  // Controla si la imagen del logo (assets/logo/logo.png) cargo correctamente.
+  // Mientras no se coloque el archivo, se muestra un espacio reservado.
+  logoCargado = false;
+
   constructor(private auth: AuthService, private router: Router) {}
+
+  onLogoLoad(): void {
+    this.logoCargado = true;
+  }
+
+  onLogoError(): void {
+    this.logoCargado = false;
+  }
 
   onSubmit(): void {
     this.error = '';

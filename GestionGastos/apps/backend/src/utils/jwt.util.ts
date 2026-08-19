@@ -7,7 +7,17 @@ export interface JwtPayload {
   role: Role;
 }
 
-const JWT_SECRET = process.env.JWT_SECRET || 'dev_secret_no_usar_en_produccion';
+function obtenerSecretoJwt(): string {
+  const secreto = process.env.JWT_SECRET;
+  if (!secreto) {
+    throw new Error(
+      'Falta la variable de entorno "JWT_SECRET". Defina una clave segura en su archivo .env antes de iniciar el servidor.'
+    );
+  }
+  return secreto;
+}
+
+const JWT_SECRET = obtenerSecretoJwt();
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '1h';
 
 export function signToken(payload: JwtPayload): string {
